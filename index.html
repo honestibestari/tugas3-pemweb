@@ -28,6 +28,45 @@
         nav ul a:hover {
             color: brown;
         }
+        #home {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            padding: 60px 32px;
+        }
+
+        #home img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffc8d8;
+        }
+
+        #home .hero-text h1 {
+            font-size: 2rem;
+            color: #c94d6b;
+            margin-bottom: 8px;
+        }
+
+        #home .hero-text p {
+            color: #9b6878;
+            margin-bottom: 16px;
+        }
+
+        #home .hero-text a {
+            background-color: #e8728f;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        #home .hero-text a:hover {
+            background-color: pink;
+        }
 
     </style>
 </head>
@@ -36,55 +75,24 @@
         <ul>
             <li><a href="#home">HOME</a></li>
             <li><a href="#about">ABOUT</a></li>
-            <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
 <hr />
-    <h1 class="greeting">Selamat Datang di Halaman Saya!</h1>
-    <button>Lihat Profil</button>
 
-    <hr>
-    <header style="text-align: center;">
+    <section id="home" style="text-align: center;">
         <img src="me.jpeg" width="200" height="200" style="border-radius: 50%;"/>
-        <h2>HONESTI BESTARI</h2>
-        <p>Mahasiswa Teknik Informatika</p>
-    </header>
+        <div class="hero-text">
+            <p style="color: #e8728f; margin-bottom: 6px;">♡ Selamat datang di halaman saya ♡</p>
+            <h1>HONESTI BESTARI</h1>
+            <p>Mahasiswa Teknik Informatika</p>
+            <a href="#about">Contact</a>
+        </div>
+    </section>
 
     <hr />
 
-    <article style="text-align: center;">
-        <h3>Tentang Saya</h3>
-        <p>
-            Hi, saya adalah seorang mahasiswa Program Studi Teknik Informatika di Universitas Esa Unggul yang saat ini sedang menempuh pendidikan di semester 4.
-            Selama masa perkuliahan, saya telah mempelajari berbagai dasar penting seperti struktur data, algoritma, basis data, serta jaringan komputer yang menjadi fondasi dalam dunia IT.
-            Saya juga memiliki minat untuk terus belajar dan mengembangkan kemampuan di bidang teknologi informasi, khususnya dalam pemrograman dan pengembangan aplikasi.
-        </p>
 
-    </article>
-
-    <div style="max-width: 600px; margin: 3em auto">
-        <table border="1" width="100%">
-            <thead>
-                <tr>
-                    <th>Riwayat Pendidikan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Tk Sint Elizabeth</li>
-                            <li>SDN 11 Pangkalan Kongsi</li>
-                            <li>SMKs Hosana Tebas</li>
-                            <li>Universitas Esa Unggul</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-<h3>Kontak</h3>
+<h3>Contact</h3>
 <ul>
     <li><a href="https://wa.me/6282210098835">WhatsApp: +62 822-1009-8835</a></li>
     <li><a href="mailto:honestibestari@gmail.com">Email: honestibestari@gmail.com</a></li>
