@@ -1,171 +1,215 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil Saya</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         nav {
-            background-color: #ffc8d8;
-            padding: 14px 32px;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 10;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             align-items: center;
+            padding: 16px 40px;
+            background: rgb(255, 190, 222);
+            border-bottom: 1px solid #f5bbcd;
         }
+
+        nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #ad1457;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
-            gap: 25px;
+            gap: 28px;
         }
+
         nav ul a {
-        text-decoration: none;
-        color: black;
-        font-size: 0.95rem;
-        transition: 0.2s;
+            text-decoration: none;
+            color: #ad1457;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
 
         nav ul a:hover {
-            color: brown;
+            color: rgb(231, 40, 40);
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            line-height: 1.5;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'DM Sans', sans-serif;
+            color: #25101e;
         }
 
         #home {
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 48px;
-            padding: 60px 32px;
+            padding: 80px 40px 40px;
+            background-color: #fcddef;
         }
 
-        #home img {
-            width: 180px;
-            height: 180px;
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            max-width: 860px;
+            width: 100%;
+        }
+
+        .hero-photo img {
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #ffc8d8;
+            border: 4px solid #fce4ec;
+            display: block;
         }
 
-        #home .hero-text h1 {
+        .hero-text .greeting {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 3rem;
+            color: #ad1457;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
             font-size: 2rem;
-            color: #c94d6b;
-            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #7b3f5e;
+            margin-bottom: 25px;
         }
 
-        #home .hero-text p {
-            color: #9b6878;
-            margin-bottom: 16px;
+        .hero-text .tagline {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #b07090;
+            margin-bottom: 30px;
         }
 
-        #home .hero-text a {
-            background-color: #e8728f;
+        .hero-text a {
+            display: inline-block;
+            background: #ad1457;
             color: white;
-            padding: 10px 24px;
-            border-radius: 24px;
+            padding: 11px 30px;
+            border-radius: 50px;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
 
-        #home .hero-text a:hover {
-            background-color: pink;
+        .hero-text a:hover {
+            background: rgb(255, 176, 176);      /* tambah ini */
+            color: #5f0e31; 
         }
+
 
         #about {
-            padding: 50px 32px;
-            max-width: 900px;
-            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 40px;
+            background-color: #fad4ea;
             text-align: center;
         }
 
         #about h2 {
-            font-size: 1.5rem;
-            margin-bottom: 25px;
-            color: #c94d6b;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            color: #ad1457;
+            margin-bottom: 40px;
+            text-align: center;
         }
 
-        #about h2:nth-of-type(2) {
-            margin-top: 50px;
-        }
-
-        #about .contact-list {
-            display: flex;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 16px;
-            flex-wrap: wrap;
-            justify-content: center;
+            width: 100%;
+            max-width: 700px;
         }
 
-        #about .contact-list a {
+        .contact-card {
             display: flex;
             flex-direction: column;
-            gap: 5px;
-            background-color: white;
-            border: 1px solid #ffc8d8;
+            gap: 4px;
+            background: #fffaf9;
+            border: 1px solid #fce4ec;
             border-radius: 12px;
-            padding: 16px 22px;
+            padding: 18px 22px;
             text-decoration: none;
-            color: #3d2030;
-            font-size: 0.9rem;
-            min-width: 200px;
-            transition: 0.3s;
+            color: #2d1a26;
+            transition: border-color 0.2s, transform 0.2s;
         }
 
-        #about .contact-list a:hover {
-            background-color: #ffc8d8;
-            transform: translateY(-3px); /* efek naik sedikit */
+        .contact-card:hover {
+            border-color: #f48fb1;
+            transform: translateY(-3px);
         }
 
-        .label {
-            font-size: 0.75rem;
-            color: #c94d6b;
-            font-weight: bold;
+        .contact-card .label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 2px;
             text-transform: uppercase;
+            color: #ad1457;
         }
 
-        .value {
-            font-size: 0.9rem;
+        .contact-card .value {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #7b3f5e;
         }
 
         footer {
             text-align: center;
             padding: 24px;
-            margin-top: 20px;
-            border-top: 1px solid #ffc8d8;
-            color: #9b6878;
-            font-size: 0.9rem;
+            margin-top: 0px;
+            border-top: 1px solid #ffc1f2;
+            font-family: 'Playfair Display', serif;
+            color: #f32697;
+            font-size: 1rem;
+            background: rgb(255, 190, 222);
         }
 
         @media (max-width: 600px) {
-            #home {
+            .hero-inner {
                 flex-direction: column;
                 text-align: center;
             }
 
-            #about {
-                flex-direction: column;
+            .hero-text .greeting {
+                font-size: 2rem;
             }
         }
-
-        h1, h2 {
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        p {
-            font-weight: 300;
-        }
-
-        nav ul a {
-            font-weight: 500;
-        }
-
-
     </style>
 </head>
 <body>
@@ -174,50 +218,51 @@
             <li><a href="#home">HOME</a></li>
             <li><a href="#about">ABOUT</a></li>
         </ul>
+        <span class="logo">Nesti</span>
     </nav>
 
+    <main>
+        <section id="home">
+            <div class="hero-inner">
+                <div class="hero-photo">
+                    <img src="me.jpeg" alt="Foto Profil" />
+                </div>
+                <div class="hero-text">
+                    <p class="greeting">Welcome to My Page ♡</p>
+                    <h1>Honesti Bestari</h1>
+                    <p class="tagline">Mahasiswa Teknik Informatika <br> Universitas Esa Unggul</p>
+                    <a href="#about">Contact</a>
+                </div>
+            </div>
+        </section>
 
-    <section id="home" style="text-align: center;">
-        <img src="me.jpeg" alt="Foto Profil"/>
-        <div class="hero-text">
-            <p style="color: #e8728f; margin-bottom: 6px;">♡ Selamat datang di halaman saya ♡</p>
-            <h1>HONESTI BESTARI</h1>
-            <p>Mahasiswa Teknik Informatika</p>
-            <a href="#about">Contact</a>
-        </div>
-    </section>
-
-    <hr/>
-
-    <section id="about">
+        <section id="about">
         <h2>Contact</h2>
-
-        <div class="contact-list">
-            <a href="https://wa.me/6282210098835" target="_blank">
+        <div class="contact-grid">
+            <a href="https://wa.me/6282210098835" target="_blank" class="contact-card">
                 <span class="label">WhatsApp</span>
                 <span class="value">+62 822-1009-8835</span>
             </a>
-
-            <a href="mailto:honestibestari@gmail.com">
+            <a href="mailto:honestibestari@gmail.com" class="contact-card">
                 <span class="label">Email</span>
                 <span class="value">honestibestari@gmail.com</span>
             </a>
         </div>
 
-        <h2>Social Media</h2>
-
-        <div class="contact-list">
-            <a href="https://www.instagram.com/nnes.tjhia_/" target="_blank">
+        <h2 style="margin-top: 48px;">Social Media</h2>
+        <div class="contact-grid" style="max-width: 340px;">
+            <a href="https://www.instagram.com/nnes.tjhia_/" target="_blank" class="contact-card">
                 <span class="label">Instagram</span>
                 <span class="value">@nnes.tjhia_</span>
             </a>
         </div>
     </section>
-<br>
-<footer>
-    <i>♡ Terima kasih sudah mengunjungi halaman saya ♡</i><br /><br />
-    &copy; 2026 Honesti Bestari
-</footer>
+    </main>
+
+    <footer>
+        <i>♡ Thank you for visiting my page ♡</i>
+        <p>&copy; 2026 Honesti Bestari</p>
+    </footer>
 
 </body>
 </html> 
