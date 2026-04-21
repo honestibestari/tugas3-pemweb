@@ -2,21 +2,46 @@
 <html>
 <head>
     <title>Profil Saya</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            background-color: #ffc8d8;
+            padding: 14px 32px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        nav ul a {
+            text-decoration: none;
+            color: black;
+            font-size: 0.95rem;
+        }
+        nav ul a:hover {
+            color: brown;
+        }
+
+    </style>
 </head>
 <body>
     <nav>
-        <div class="nav-inner">
-            <div class="<hr>nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="index.html">Tentang Saya</a>
-                <a href="index.html#contact">Kontak</a>
-            </div>
-        </div>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
     </nav>
 <hr />
-    <h1>Selamat Datang di Halaman Saya!</h1>
+    <h1 class="greeting">Selamat Datang di Halaman Saya!</h1>
     <button>Lihat Profil</button>
-    <!-- <a href="#about" class="hero-btn">Lihat Profil &darr;</a> -->
 
     <hr>
     <header style="text-align: center;">
