@@ -68,6 +68,74 @@
             background-color: pink;
         }
 
+        #contact {
+            padding: 50px 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #contact h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #c94d6b;
+        }
+
+        #contact .contact-list {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        #contact .contact-list a {
+            display: flex;
+            flex-direction: column; /* label di atas, value di bawah */
+            gap: 5px;
+            background-color: white;
+            border: 1px solid #ffc8d8;
+            border-radius: 10px;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: #3d2030;
+            font-size: 0.9rem;
+            min-width: 200px;
+        }
+
+        #contact .contact-list a:hover {
+            background-color: #ffc8d8;
+        }
+
+        .label {
+            font-size: 0.75rem;
+            color: #c94d6b;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .value {
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            margin-top: 20px;
+            border-top: 1px solid #ffc8d8;
+            color: #9b6878;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            #home {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #about {
+                flex-direction: column;
+            }
+        }
+
+
     </style>
 </head>
 <body>
@@ -91,17 +159,38 @@
 
     <hr />
 
+    <section id="contact">
+        <h2>Contact</h2>
 
-<h3>Contact</h3>
-<ul>
-    <li><a href="https://wa.me/6282210098835">WhatsApp: +62 822-1009-8835</a></li>
-    <li><a href="mailto:honestibestari@gmail.com">Email: honestibestari@gmail.com</a></li>
-</ul>
+        <div class="contact-list">
+
+            <a href="https://wa.me/6282210098835" target="_blank">
+                <span class="label">WhatsApp</span>
+                <span class="value">+62 822-1009-8835</span>
+            </a>
+
+            <a href="mailto:honestibestari@gmail.com">
+                <span class="label">Email</span>
+                <span class="value">honestibestari@gmail.com</span>
+            </a>
+
+            <a href="https://www.instagram.com/nnes.tjhia_/" target="_blank">
+                <span class="label">Instagram</span>
+                <span class="value">@nnes.tjhia_</span>
+            </a>
+
+        </div>
+    </section>
+
 <br>
 <br>
 
 <hr>
 <p style="text-align:center;""><i>Terima kasih sudah mengunjungi halaman saya.</i></p>
+
+<footer>
+&copy; 2026 Honesti Bestari
+</footer>
 
 </body>
 </html> 
